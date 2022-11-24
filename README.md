@@ -1,5 +1,5 @@
 # M2 SISE DW - Analysis of the affluent factors on the number of cyclists in Paris in 2022
-_As part of the Datawarehouse course_
+_As part of the Datawarehouse course in Master 2 SISE, University Lumière Lyon 2_
 
 ## Introduction
 

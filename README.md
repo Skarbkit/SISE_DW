@@ -1,4 +1,4 @@
-# M2 SISE DW - Analysis of the affluent factors on the number of cyclists in Paris in 2022
+# M2 SISE DW - Analysis of affluent factors on the number of cyclists in Paris in 2022
 _As part of the Datawarehouse course in Master 2 SISE, University Lumière Lyon 2_
 
 ## Introduction
@@ -30,7 +30,7 @@ Description of the DB tables :
 ## Cleaning Process
 
 All of the datasets were cleaned using Python in .py and .ipynb files. 
-Most of the cleaning process was :
+Most of the cleaning process were to :
 - Remove NA value
 - Correct multiple variables formats 
 - Select columns of legitimate interest for our analysis

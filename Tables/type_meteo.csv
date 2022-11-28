@@ -1,0 +1,10 @@
+Type_Meteo
+id_meteo ;nom_meteo
+1;Ensoleillé/clair
+2;Partiellement nuageux
+3;Nuageux
+4;Pluvieux
+5;Brumeux
+6;Neigeux
+7;Orageux
+8;Tempête de sable

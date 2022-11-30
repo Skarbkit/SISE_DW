@@ -1,0 +1,1152 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0916.1526                               -->
+<workbook original-version='18.1' source-build='2022.2.2 (20222.22.0916.1526)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='comptage_final+' inline='true' name='federated.0lu6s4j1ih2tay13zjvw802vrlth' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='comptage_final' name='textscan.1r4dib108ls0qf1awt04p1n8mhtu'>
+            <connection class='textscan' directory='C:/Users/pauli/Documents/M2/entrepot de donnees/Final_tables' filename='comptage_final.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='arrondissement.csv' table='[arrondissement#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+            <column datatype='string' name='id_arr' ordinal='0' />
+            <column datatype='string' name='ville' ordinal='1' />
+            <column datatype='integer' name='code_insee' ordinal='2' />
+            <column datatype='integer' name='num_arr' ordinal='3' />
+            <column datatype='string' name='nom_arr' ordinal='4' />
+            <column datatype='real' name='surface_arr' ordinal='5' />
+            <column datatype='real' name='lat' ordinal='6' />
+            <column datatype='real' name='lon' ordinal='7' />
+            <column datatype='string' name='geometry' ordinal='8' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='comptage_final.csv' table='[comptage_final#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+              <column datatype='string' name='id_position' ordinal='0' />
+              <column datatype='real' name='Comptage horaire' ordinal='1' />
+              <column datatype='date' name='id_date' ordinal='2' />
+              <column datatype='datetime' name='id_heure' ordinal='3' />
+              <column datatype='string' name='id_meteo' ordinal='4' />
+              <column datatype='string' name='id_trafic' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='dates.csv' table='[dates#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+              <column datatype='date' name='id_date' ordinal='0' />
+              <column datatype='string' name='mois' ordinal='1' />
+              <column datatype='string' name='jour_semaine' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='localisation.csv' table='[localisation#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+              <column datatype='string' name='id_position' ordinal='0' />
+              <column datatype='string' name='type_install' ordinal='1' />
+              <column datatype='real' name='lat' ordinal='2' />
+              <column datatype='real' name='lon' ordinal='3' />
+              <column datatype='string' name='geometry' ordinal='4' />
+              <column datatype='string' name='id_arr' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='arrondissement.csv' table='[arrondissement#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+              <column datatype='string' name='id_arr' ordinal='0' />
+              <column datatype='string' name='ville' ordinal='1' />
+              <column datatype='integer' name='code_insee' ordinal='2' />
+              <column datatype='integer' name='num_arr' ordinal='3' />
+              <column datatype='string' name='nom_arr' ordinal='4' />
+              <column datatype='real' name='surface_arr' ordinal='5' />
+              <column datatype='real' name='lat' ordinal='6' />
+              <column datatype='real' name='lon' ordinal='7' />
+              <column datatype='string' name='geometry' ordinal='8' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='meteo.csv' table='[meteo#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+              <column datatype='string' name='id_meteo' ordinal='0' />
+              <column datatype='real' name='Vitesse_vent_moyen' ordinal='1' />
+              <column datatype='real' name='Humidité' ordinal='2' />
+              <column datatype='real' name='Température' ordinal='3' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='trafic.csv' table='[trafic#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+              <column datatype='integer' name='Etat trafic' ordinal='0' />
+              <column datatype='real' name='prix' ordinal='1' />
+              <column datatype='string' name='id_trafic' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Comptage horaire]' value='[comptage_final.csv].[Comptage horaire]' />
+          <map key='[Etat trafic]' value='[trafic.csv].[Etat trafic]' />
+          <map key='[Humidité]' value='[meteo.csv].[Humidité]' />
+          <map key='[Température]' value='[meteo.csv].[Température]' />
+          <map key='[Vitesse_vent_moyen]' value='[meteo.csv].[Vitesse_vent_moyen]' />
+          <map key='[code_insee]' value='[arrondissement.csv].[code_insee]' />
+          <map key='[geometry (arrondissement.csv)]' value='[arrondissement.csv].[geometry]' />
+          <map key='[geometry]' value='[localisation.csv].[geometry]' />
+          <map key='[id_arr (arrondissement.csv)]' value='[arrondissement.csv].[id_arr]' />
+          <map key='[id_arr]' value='[localisation.csv].[id_arr]' />
+          <map key='[id_date (dates.csv)]' value='[dates.csv].[id_date]' />
+          <map key='[id_date]' value='[comptage_final.csv].[id_date]' />
+          <map key='[id_heure]' value='[comptage_final.csv].[id_heure]' />
+          <map key='[id_meteo (meteo.csv)]' value='[meteo.csv].[id_meteo]' />
+          <map key='[id_meteo]' value='[comptage_final.csv].[id_meteo]' />
+          <map key='[id_position (localisation.csv)]' value='[localisation.csv].[id_position]' />
+          <map key='[id_position]' value='[comptage_final.csv].[id_position]' />
+          <map key='[id_trafic (trafic.csv)]' value='[trafic.csv].[id_trafic]' />
+          <map key='[id_trafic]' value='[comptage_final.csv].[id_trafic]' />
+          <map key='[jour_semaine]' value='[dates.csv].[jour_semaine]' />
+          <map key='[lat (arrondissement.csv)]' value='[arrondissement.csv].[lat]' />
+          <map key='[lat]' value='[localisation.csv].[lat]' />
+          <map key='[lon (arrondissement.csv)]' value='[arrondissement.csv].[lon]' />
+          <map key='[lon]' value='[localisation.csv].[lon]' />
+          <map key='[mois]' value='[dates.csv].[mois]' />
+          <map key='[nom_arr]' value='[arrondissement.csv].[nom_arr]' />
+          <map key='[num_arr]' value='[arrondissement.csv].[num_arr]' />
+          <map key='[prix]' value='[trafic.csv].[prix]' />
+          <map key='[surface_arr]' value='[arrondissement.csv].[surface_arr]' />
+          <map key='[type_install]' value='[localisation.csv].[type_install]' />
+          <map key='[ville]' value='[arrondissement.csv].[ville]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_position]</local-name>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias>id_position</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Comptage horaire</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Comptage horaire]</local-name>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias>Comptage horaire</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[id_date]</local-name>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias>id_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_heure</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[id_heure]</local-name>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias>id_heure</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_meteo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_meteo]</local-name>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias>id_meteo</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_trafic</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_trafic]</local-name>
+            <parent-name>[comptage_final.csv]</parent-name>
+            <remote-alias>id_trafic</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dates.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[id_date (dates.csv)]</local-name>
+            <parent-name>[dates.csv]</parent-name>
+            <remote-alias>id_date</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mois</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mois]</local-name>
+            <parent-name>[dates.csv]</parent-name>
+            <remote-alias>mois</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>jour_semaine</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[jour_semaine]</local-name>
+            <parent-name>[dates.csv]</parent-name>
+            <remote-alias>jour_semaine</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_position</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_position (localisation.csv)]</local-name>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias>id_position</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>type_install</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[type_install]</local-name>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias>type_install</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lon</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lon]</local-name>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias>lon</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geometry</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[geometry]</local-name>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias>geometry</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_arr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_arr]</local-name>
+            <parent-name>[localisation.csv]</parent-name>
+            <remote-alias>id_arr</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_arr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_arr (arrondissement.csv)]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>id_arr</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ville</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ville]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>ville</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code_insee</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[code_insee]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>code_insee</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_arr</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_arr]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>num_arr</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nom_arr</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[nom_arr]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>nom_arr</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>surface_arr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[surface_arr]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>surface_arr</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat (arrondissement.csv)]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lon</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lon (arrondissement.csv)]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>lon</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geometry</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[geometry (arrondissement.csv)]</local-name>
+            <parent-name>[arrondissement.csv]</parent-name>
+            <remote-alias>geometry</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[meteo.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_meteo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_meteo (meteo.csv)]</local-name>
+            <parent-name>[meteo.csv]</parent-name>
+            <remote-alias>id_meteo</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Vitesse_vent_moyen</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Vitesse_vent_moyen]</local-name>
+            <parent-name>[meteo.csv]</parent-name>
+            <remote-alias>Vitesse_vent_moyen</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Humidité</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Humidité]</local-name>
+            <parent-name>[meteo.csv]</parent-name>
+            <remote-alias>Humidité</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Température</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Température]</local-name>
+            <parent-name>[meteo.csv]</parent-name>
+            <remote-alias>Température</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[trafic.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;fr_FR&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot; &quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Etat trafic</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Etat trafic]</local-name>
+            <parent-name>[trafic.csv]</parent-name>
+            <remote-alias>Etat trafic</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prix</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[prix]</local-name>
+            <parent-name>[trafic.csv]</parent-name>
+            <remote-alias>prix</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_trafic</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id_trafic (trafic.csv)]</local-name>
+            <parent-name>[trafic.csv]</parent-name>
+            <remote-alias>id_trafic</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LFR_RFR' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' name='[Comptage horaire]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Température]' role='measure' type='quantitative' />
+      <column caption='Vitesse vent moyen' datatype='real' name='[Vitesse_vent_moyen]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='arrondissement.csv' datatype='table' name='[__tableau_internal_object_id__].[arrondissement.csv_A73FA9F52B7E4E8DAAC03A6C6D70F69C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='comptage_final.csv' datatype='table' name='[__tableau_internal_object_id__].[comptage_final.csv_AD94FD162A6B4D028C68D738B838E297]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='dates.csv' datatype='table' name='[__tableau_internal_object_id__].[dates.csv_1278FAA8FC4248C3AA10984DE9016A75]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='localisation.csv' datatype='table' name='[__tableau_internal_object_id__].[localisation.csv_86F7F598A9D941DC86F2F3DE0DAB69D7]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='meteo.csv' datatype='table' name='[__tableau_internal_object_id__].[meteo.csv_C0F20CC70F0A401296B82B074C2454BC]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='trafic.csv' datatype='table' name='[__tableau_internal_object_id__].[trafic.csv_83D97361542648BCAA5958B638D216AD]' role='measure' type='quantitative' />
+      <column caption='Code Insee' datatype='integer' name='[code_insee]' role='dimension' type='ordinal' />
+      <column caption='Geometry (Arrondissement.Csv)' datatype='string' name='[geometry (arrondissement.csv)]' role='dimension' type='nominal' />
+      <column caption='Geometry' datatype='string' default-role='measure' default-type='ordinal' name='[geometry]' role='dimension' type='nominal' />
+      <column caption='Id Arr (Arrondissement.Csv)' datatype='string' name='[id_arr (arrondissement.csv)]' role='dimension' type='nominal' />
+      <column caption='Id Arr' datatype='string' name='[id_arr]' role='dimension' type='nominal' />
+      <column caption='Id Date (Dates.Csv)' datatype='date' name='[id_date (dates.csv)]' role='dimension' type='ordinal' />
+      <column caption='Id Date' datatype='date' name='[id_date]' role='dimension' type='ordinal' />
+      <column aggregation='Hour' caption='Id Heure' datatype='datetime' name='[id_heure]' role='dimension' type='ordinal' />
+      <column caption='Id Meteo (Meteo.Csv)' datatype='string' name='[id_meteo (meteo.csv)]' role='dimension' type='nominal' />
+      <column caption='Id Meteo' datatype='string' name='[id_meteo]' role='dimension' type='nominal' />
+      <column caption='Id Position (Localisation.Csv)' datatype='string' name='[id_position (localisation.csv)]' role='dimension' type='nominal' />
+      <column caption='Id Position' datatype='string' name='[id_position]' role='dimension' type='nominal' />
+      <column caption='Id Trafic (Trafic.Csv)' datatype='string' name='[id_trafic (trafic.csv)]' role='dimension' type='nominal' />
+      <column caption='Id Trafic' datatype='string' name='[id_trafic]' role='dimension' type='nominal' />
+      <column caption='Jour Semaine' datatype='string' name='[jour_semaine]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Lat (Arrondissement.Csv)' datatype='real' name='[lat (arrondissement.csv)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Lon (Arrondissement.Csv)' datatype='real' name='[lon (arrondissement.csv)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Lon' datatype='real' name='[lon]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Mois' datatype='string' name='[mois]' role='dimension' type='nominal' />
+      <column caption='Nom Arr' datatype='string' name='[nom_arr]' role='dimension' type='nominal' />
+      <column caption='Num Arr' datatype='integer' name='[num_arr]' role='measure' type='quantitative' />
+      <column caption='Prix' datatype='real' name='[prix]' role='measure' type='quantitative' />
+      <column caption='Surface Arr' datatype='real' name='[surface_arr]' role='measure' type='quantitative' />
+      <column caption='Type Install' datatype='string' name='[type_install]' role='dimension' type='nominal' />
+      <column caption='Ville' datatype='string' name='[ville]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column-instance column='[Comptage horaire]' derivation='Avg' name='[avg:Comptage horaire:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Température]' derivation='Avg' name='[avg:Température:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[jour_semaine]' derivation='None' name='[none:jour_semaine:nk]' pivot='key' type='nominal' />
+      <column-instance column='[mois]' derivation='None' name='[none:mois:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Comptage horaire]' derivation='Sum' name='[sum:Comptage horaire:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:jour_semaine:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Jeudi&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Mercredi&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Samedi&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Mardi&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Vendredi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Lundi&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Dimanche&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0lu6s4j1ih2tay13zjvw802vrlth].[avg:Comptage horaire:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0lu6s4j1ih2tay13zjvw802vrlth].[sum:Comptage horaire:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0lu6s4j1ih2tay13zjvw802vrlth].[avg:Température:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:mois:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Octobre&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Mai&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Fevrier&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Novembre&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Juin&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Janvier&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Juillet&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Decembre&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Septembre&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Mars&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Aout&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Avril&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;FR&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='arrondissement.csv' id='arrondissement.csv_A73FA9F52B7E4E8DAAC03A6C6D70F69C'>
+            <properties context=''>
+              <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='arrondissement.csv' table='[arrondissement#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+                  <column datatype='string' name='id_arr' ordinal='0' />
+                  <column datatype='string' name='ville' ordinal='1' />
+                  <column datatype='integer' name='code_insee' ordinal='2' />
+                  <column datatype='integer' name='num_arr' ordinal='3' />
+                  <column datatype='string' name='nom_arr' ordinal='4' />
+                  <column datatype='real' name='surface_arr' ordinal='5' />
+                  <column datatype='real' name='lat' ordinal='6' />
+                  <column datatype='real' name='lon' ordinal='7' />
+                  <column datatype='string' name='geometry' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='comptage_final.csv' id='comptage_final.csv_AD94FD162A6B4D028C68D738B838E297'>
+            <properties context=''>
+              <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='comptage_final.csv' table='[comptage_final#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='string' name='id_position' ordinal='0' />
+                  <column datatype='real' name='Comptage horaire' ordinal='1' />
+                  <column datatype='date' name='id_date' ordinal='2' />
+                  <column datatype='datetime' name='id_heure' ordinal='3' />
+                  <column datatype='string' name='id_meteo' ordinal='4' />
+                  <column datatype='string' name='id_trafic' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='dates.csv' id='dates.csv_1278FAA8FC4248C3AA10984DE9016A75'>
+            <properties context=''>
+              <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='dates.csv' table='[dates#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='date' name='id_date' ordinal='0' />
+                  <column datatype='string' name='mois' ordinal='1' />
+                  <column datatype='string' name='jour_semaine' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='localisation.csv' id='localisation.csv_86F7F598A9D941DC86F2F3DE0DAB69D7'>
+            <properties context=''>
+              <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='localisation.csv' table='[localisation#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR' separator=';'>
+                  <column datatype='string' name='id_position' ordinal='0' />
+                  <column datatype='string' name='type_install' ordinal='1' />
+                  <column datatype='real' name='lat' ordinal='2' />
+                  <column datatype='real' name='lon' ordinal='3' />
+                  <column datatype='string' name='geometry' ordinal='4' />
+                  <column datatype='string' name='id_arr' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='meteo.csv' id='meteo.csv_C0F20CC70F0A401296B82B074C2454BC'>
+            <properties context=''>
+              <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='meteo.csv' table='[meteo#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='string' name='id_meteo' ordinal='0' />
+                  <column datatype='real' name='Vitesse_vent_moyen' ordinal='1' />
+                  <column datatype='real' name='Humidité' ordinal='2' />
+                  <column datatype='real' name='Température' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='trafic.csv' id='trafic.csv_83D97361542648BCAA5958B638D216AD'>
+            <properties context=''>
+              <relation connection='textscan.1r4dib108ls0qf1awt04p1n8mhtu' name='trafic.csv' table='[trafic#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='fr_FR'>
+                  <column datatype='integer' name='Etat trafic' ordinal='0' />
+                  <column datatype='real' name='prix' ordinal='1' />
+                  <column datatype='string' name='id_trafic' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[id_arr]' />
+              <expression op='[id_arr (arrondissement.csv)]' />
+            </expression>
+            <first-end-point object-id='localisation.csv_86F7F598A9D941DC86F2F3DE0DAB69D7' />
+            <second-end-point object-id='arrondissement.csv_A73FA9F52B7E4E8DAAC03A6C6D70F69C' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id_date]' />
+              <expression op='[id_date (dates.csv)]' />
+            </expression>
+            <first-end-point object-id='comptage_final.csv_AD94FD162A6B4D028C68D738B838E297' />
+            <second-end-point object-id='dates.csv_1278FAA8FC4248C3AA10984DE9016A75' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id_position]' />
+              <expression op='[id_position (localisation.csv)]' />
+            </expression>
+            <first-end-point object-id='comptage_final.csv_AD94FD162A6B4D028C68D738B838E297' />
+            <second-end-point object-id='localisation.csv_86F7F598A9D941DC86F2F3DE0DAB69D7' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id_meteo]' />
+              <expression op='[id_meteo (meteo.csv)]' />
+            </expression>
+            <first-end-point object-id='comptage_final.csv_AD94FD162A6B4D028C68D738B838E297' />
+            <second-end-point object-id='meteo.csv_C0F20CC70F0A401296B82B074C2454BC' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id_trafic]' />
+              <expression op='[id_trafic (trafic.csv)]' />
+            </expression>
+            <first-end-point object-id='comptage_final.csv_AD94FD162A6B4D028C68D738B838E297' />
+            <second-end-point object-id='trafic.csv_83D97361542648BCAA5958B638D216AD' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Feuille 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='comptage_final+' name='federated.0lu6s4j1ih2tay13zjvw802vrlth' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0lu6s4j1ih2tay13zjvw802vrlth'>
+            <column datatype='real' name='[Comptage horaire]' role='measure' type='quantitative' />
+            <column-instance column='[Comptage horaire]' derivation='Avg' name='[avg:Comptage horaire:qk]' pivot='key' type='quantitative' />
+            <column caption='Jour Semaine' datatype='string' name='[jour_semaine]' role='dimension' type='nominal' />
+            <column caption='Mois' datatype='string' name='[mois]' role='dimension' type='nominal' />
+            <column-instance column='[jour_semaine]' derivation='None' name='[none:jour_semaine:nk]' pivot='key' type='nominal' />
+            <column-instance column='[mois]' derivation='None' name='[none:mois:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0lu6s4j1ih2tay13zjvw802vrlth].[avg:Comptage horaire:qk]' included-values='non-null' />
+          <slices>
+            <column>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[avg:Comptage horaire:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:jour_semaine:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[avg:Comptage horaire:qk]</rows>
+        <cols>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:mois:nk]</cols>
+      </table>
+      <simple-id uuid='{BE8243F1-BA08-4B97-A5A3-7E3B9E0271DD}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='Feuille 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='1' param='[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:jour_semaine:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[:Measure Names]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[avg:Température:qk]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:Vitesse_vent_moyen:qk]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:id_meteo (meteo.csv):ok]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:jour_semaine:nk]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[none:mois:nk]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[sum:prix:qk]</field>
+            <field>[federated.0lu6s4j1ih2tay13zjvw802vrlth].[yr:id_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{811B2798-54B2-4B66-9515-0A5B1199E7C9}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Feuille 1' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
